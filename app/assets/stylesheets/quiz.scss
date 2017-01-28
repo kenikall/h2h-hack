@@ -12,6 +12,8 @@ body{
   font-size: 32px;
   background-color: ivory;
   overflow: auto;
+  margin: 0;
+  padding: 10px;
 }
 
 p {
@@ -53,6 +55,7 @@ p {
 }
 
 #navbar{
+  z-index: 10;
   position: fixed;
   height:80px;
   width: 95%;
