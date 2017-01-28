@@ -1,6 +1,7 @@
 $(document).ready(function() {
   // meetingLinkGrabber();
   // videoLinkGrabber();
+
 });
 
 // Grabs meeting URL and meeting ID
@@ -13,7 +14,7 @@ var meetingLinkGrabber = function() {
       "applicationId": "9155BF89-2C10-4E43-88F3-73748AC158D0",
       "name": "mannah",
       "templateId": "DA22B2BF-19FE-4463-8FBC-508683D4A76D"
-        })    
+        })
   });
 
   request.done(function(response) {

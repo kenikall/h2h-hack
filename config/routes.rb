@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :quiz
+
   resources :quizzes do
     resources :question
   end

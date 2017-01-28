@@ -1,10 +1,18 @@
 <div id="dataviz">
+  <!-- <code class="hidden" data="<%= #@user.quizzes.questions.results.find_by(user_id: @user.id).to_json %>"></code> -->
   <div id="time-map">
   </div>
   <div id="line-graph">
   </div>
+
   <div id="doughnut">
+    <form>
+      <label><input type="radio" name="dataset" id="dataset" value="total" checked> Total</label>
+      <label><input type="radio" name="dataset" id="dataset" value="option1"> Option 1</label>
+      <label><input type="radio" name="dataset" id="dataset" value="option2"> Option 2</label>
+    </form>
   </div>
+
   <div id="histogram">
   </div>
 </div>
