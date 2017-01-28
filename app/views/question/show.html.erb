@@ -3,19 +3,23 @@
   <h2 class='question'><%= @question.text %></h2>
   <div id="participants">
     <div id="user1" class="users">
-      <img id='user1-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user1-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user1-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
       <p class="name">Alex</p>
     </div>
     <div id="user2" class="users">
-      <img id='user2-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user2-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user2-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
       <p class="name">Kelvin</p>
     </div>
     <div id="user3" class="users">
-      <img id='user3-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user3-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user3-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
       <p class="name">Nick</p>
     </div>
     <div id="user4" class="users">
-      <img id='user4-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user4-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <img id='user4-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
       <p class="name">Ready?</p>
     </div>
   </div>
@@ -35,11 +39,11 @@
     <ol>
       <% @quiz.questions.all.each do |question| %>
         <li>
-          <%= question.text %>
-          <% question.responses.each do |response| %>
-            <% if response.correct %>
-              <a href="<%= response.path %>"></a>
-            <% end %>
+          <%= link_to question.text, quiz_question_path(@quiz, question) %>
+          <% if question.responses.find_by(user_id: @user.id).correct %>
+            <img src=<%= image_url('correct-icon.png') %> >
+          <% else %>
+            <img src=<%= image_url('wrong-icon.png') %> >
           <% end %>
         </li>
       <% end %>
