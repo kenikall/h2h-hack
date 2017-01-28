@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  meetingLinkGrabber();
-
+  // meetingLinkGrabber();
+  // videoLinkGrabber();
 });
 
 // Grabs meeting URL and meeting ID
@@ -28,4 +28,16 @@ var meetingLinkGrabber = function() {
   request.fail(function(response) {
     alert("An error occured.");
   });
+};
+
+var videoLinkGrabber = function(meetingId) {
+  $.ajax({
+  url: "https://meetstage-us.liveh2h.com/h2h-record/record/listings?meetingId=272869444&origin=TME",
+  type: 'GET',
+  success: function(response) {
+      console.log('response', response);
+  },  
+  error: function (e) {
+  }
+});
 };
