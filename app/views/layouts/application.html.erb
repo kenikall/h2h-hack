@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>H2hHack</title>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -32,6 +31,7 @@
         <h1 id='title'>H2H Quizzes</h1>
         <p id='subtitle'>powered by</p>
         <img id='h2h' src= <%= image_url("h2h.png") %>>
+        <img id='end-call' src= <%= image_url("end-call.png") %>>
         <div id="user-info">
             <div id="icon-image">
                 <img id="user-image"src=<%= image_url("user-icon.png") %>>

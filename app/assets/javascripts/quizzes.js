@@ -1,18 +1,20 @@
 $(document).ready(function() {
-  var meetingURL = ""
-  var meetingId = ""
+  // meetingLinkGrabber();
+  // videoLinkGrabber();
+  var meetingURL = "";
+  var meetingId = "";
   meetingLinkGrabber();
-  console.log(meetingURL)
-})
+  console.log(meetingURL);
+});
 
 var meetingFrame = function(){
   $('#user4-rbutton').click(function () {
     event.preventDefault();
-    console.log('clicked the video listener')
+    console.log('clicked the video listener');
 
-    document.getElementById('q-show-content').innerHTML='<object class="video" style="height:800px; width:1000px;" type="text/html" data=' + meetingURL + '></object>'
-  })
-}
+    document.getElementById('q-show-content').innerHTML='<object class="video" style="height:800px; width:1000px;" type="text/html" data=' + meetingURL + '></object>';
+  });
+};
 
 // Grabs meeting URL and meeting ID
 var meetingLinkGrabber = function() {
@@ -44,5 +46,17 @@ request.done(function(response) {
 
 request.fail(function(response) {
   alert("An error occured.");
+});
+};
+
+var videoLinkGrabber = function(meetingId) {
+  $.ajax({
+  url: "https://meetstage-us.liveh2h.com/h2h-record/record/listings?meetingId=272869444&origin=TME",
+  type: 'GET',
+  success: function(response) {
+      console.log('response', response);
+  },  
+  error: function (e) {
+  }
 });
 };
