@@ -1,17 +1,24 @@
 h2{ padding: 0px}
 h3{ padding: 0px}
-h6{ margin-bottom: 5px }
+h6{ 
+  margin-bottom: 5px;
+  margin-top: 0;
+  }
 
 
-#q-show-content{
-  position: fixed;
-  top: 90px;
-  left: 5%;
+#q-left-show-content{
+  float: left;
+  margin-left: 3%;
+  margin-top: 8%;
+}
+
+#q-right-show-content{
+  float: right;
 }
 
 .users{
-  position: fixed;
-  left: 80%;
+  position: absolute;
+  right: 5%;
   top: 90px;
   width: 200px;
   height: 65px;
@@ -57,31 +64,43 @@ h6{ margin-bottom: 5px }
 #user4{ top: 330px; }
 
 #quiz-questions{
-  position: fixed;
-  top: 410px;
-  left: 55%;
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+#quiz-questions img{
+  transform: scale(.5);
+  margin-bottom: 3px;
+  vertical-align: middle;
 }
 
 .quiz-name{
-  position: fixed;
   color: SlateGray;
-  top: 50px;
+  margin: 0;
 }
 
 .question{
-  position: fixed;
-  top: 75px;
+  margin: 0;  
 }
 
-#input-icons{
-  position: relative;
-  top: 150px;
+#input-icons ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#input-icons img{
+  transform: scale(.4);
+}
+
+#input-icons li {
+  float: left;
 }
 
 #response-area{
   position: relative;
   background-color: white;
-  top: 160px;
+  top: 100px;
   height: 300px;
   width: 600px;
   border: 3px solid black;
@@ -93,4 +112,7 @@ h6{ margin-bottom: 5px }
   border: none;
   height: 100%;
   width: 100%;
+  vertical-align: top;
+  left: 0px;
+  position: absolute;
 }
