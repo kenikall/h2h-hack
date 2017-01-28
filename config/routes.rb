@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'quiz#index'
 
+  get 'user/show'
+
   get 'question/show'
 
   get 'quiz/index'
