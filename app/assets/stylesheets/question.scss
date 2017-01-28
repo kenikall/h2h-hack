@@ -1,14 +1,15 @@
 h2{ padding: 0px}
 h3{ padding: 0px}
-h6{ margin-bottom: 5px }
+h6{ 
+  margin-bottom: 5px;
+  margin-top: 0;
+  }
 
 
 #q-left-show-content{
   float: left;
   margin-left: 3%;
-  margin-top: 10%;
-  // top: 90px;
-  // left: 5%;
+  margin-top: 8%;
 }
 
 #q-right-show-content{
@@ -63,10 +64,8 @@ h6{ margin-bottom: 5px }
 #user4{ top: 330px; }
 
 #quiz-questions{
-  position: absolute;
-  top: 410px;
-  left: 107%;
-  width: 400px;
+  margin-top: 7%;
+  margin-left: 2%;
 }
 
 #quiz-questions img{
@@ -81,9 +80,7 @@ h6{ margin-bottom: 5px }
 }
 
 .question{
-  // position: absolute;
   margin: 0;  
-  // top: 75px;
 }
 
 #input-icons ul {
@@ -115,4 +112,7 @@ h6{ margin-bottom: 5px }
   border: none;
   height: 100%;
   width: 100%;
+  vertical-align: top;
+  left: 0px;
+  position: absolute;
 }
