@@ -1,2 +1,13 @@
-<h1>Quiz#index</h1>
+<div id="user-info">
+  <%= @user.name %>
+  <a href="/users/<%= @user.id %>"></a>
+</div>
+<h1>Welcome to H2H Quizzes</h1>
+<ul>
+  <% @quizzes.each do |quiz| %>
+    <li class="quiz-list">
+      <a href="/quizzes/<%= quiz.id %>"><%= quiz.name %></a>
+    </li>
+  <% end  %>
+</ul>
 <p>Find me in app/views/quiz/index.html.erb</p>
