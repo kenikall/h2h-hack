@@ -14,15 +14,37 @@ h6{ margin-bottom: 5px }
   left: 80%;
   top: 90px;
   width: 200px;
+  height: 65px;
   background-color: white;
   border: 5px solid black;
   border-radius: 10px;
 }
 
 .user-button{
+  position: relative;
   padding: 5px;
 }
 
+#user1-gbutton{
+  display: none;
+  position: absolute;
+  left: 0px
+}
+#user2-gbutton{
+  display: none;
+  position: absolute;
+  left: 0px
+}
+#user3-gbutton{
+  display: none;
+  position: absolute;
+  left: 0px
+}
+#user4-gbutton{
+  display: none;
+  position: absolute;
+  left: 0px
+}
 .name{
   font-size: 30px;
   position: absolute;
@@ -37,17 +59,18 @@ h6{ margin-bottom: 5px }
 #quiz-questions{
   position: fixed;
   top: 410px;
-  left: 70%;
+  left: 55%;
 }
 
 .quiz-name{
   position: fixed;
+  color: SlateGray;
   top: 50px;
 }
 
 .question{
   position: fixed;
-  top: 70px;
+  top: 75px;
 }
 
 #input-icons{
