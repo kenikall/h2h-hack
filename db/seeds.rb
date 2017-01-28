@@ -20,16 +20,16 @@ Quiz.create( name: 'Ember', date: Date.new(2017,01,03), users: User.all)
 Quiz.create( name: 'html', date: Date.new(2017,01,03), users: User.all)
 
 Quiz.all.each do |quiz|
-  Question.create( text: 'Question 1', quiz_id: quiz.id)
-  Question.create( text: 'Question 2', quiz_id: quiz.id)
-  Question.create( text: 'Question 3', quiz_id: quiz.id)
-  Question.create( text: 'Question 4', quiz_id: quiz.id)
-  Question.create( text: 'Question 5', quiz_id: quiz.id)
-  Question.create( text: 'Question 6', quiz_id: quiz.id)
-  Question.create( text: 'Question 7', quiz_id: quiz.id)
-  Question.create( text: 'Question 8', quiz_id: quiz.id)
-  Question.create( text: 'Question 9', quiz_id: quiz.id)
-  Question.create( text: 'Question 10', quiz_id: quiz.id)
+  Question.create( text: 'Hello world?', quiz_id: quiz.id)
+  Question.create( text: 'Substring with Concatenation of All Words', quiz_id: quiz.id)
+  Question.create( text: 'Word Pattern, Word Pattern II', quiz_id: quiz.id)
+  Question.create( text: 'Largest Rectangle in Histogram', quiz_id: quiz.id)
+  Question.create( text: 'Add Binary ', quiz_id: quiz.id)
+  Question.create( text: 'Merge Sorted Array', quiz_id: quiz.id)
+  Question.create( text: 'Kth Largest Element in an Array', quiz_id: quiz.id)
+  Question.create( text: 'Isomorphic Strings', quiz_id: quiz.id)
+  Question.create( text: '3Sum Closest', quiz_id: quiz.id)
+  Question.create( text: 'Wildcard Matching, Regular Expression Matching', quiz_id: quiz.id)
 end
 
 Question.all.each do |question|
@@ -39,6 +39,7 @@ Question.all.each do |question|
   Response.create( path: 'wwww.google.com', correct: Random.rand(2), question_id: question.id, user_id: User.find_by(name: 'Kelvin').id)
 end
 
-Quiz.create( name: 'New Quiz', date: Date.new(2017,01,03))
-Question.create( text: 'Question 1', quiz_id: Quiz.last.id)
+Quiz.create( name: 'H2H Quiz', date: Date.new(2017,01,03))
+Question.create( text: 'How do you join a meeting?', quiz_id: Quiz.last.id)
+Question.create( text: 'How can an application assign a host?', quiz_id: Quiz.last.id)
 
