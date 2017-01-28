@@ -1,24 +1,5 @@
-# README
+# H2H Quizzes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+H2H Quizzes allow user to get immediate feedback and discussion on the quizzes that they've completed.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt text](./main-page.png)
