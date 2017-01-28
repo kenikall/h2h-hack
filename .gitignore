@@ -1,7 +1,7 @@
 *.rbc
 capybara-*.html
 .rspec
-/log
+/log/**
 /tmp
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -11,3 +11,4 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+*/development.log
