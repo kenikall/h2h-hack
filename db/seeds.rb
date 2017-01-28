@@ -38,3 +38,7 @@ Question.all.each do |question|
   Response.create( path: 'wwww.google.com', correct: Random.rand(2), question_id: question.id, user_id: User.find_by(name: 'Mannah').id)
   Response.create( path: 'wwww.google.com', correct: Random.rand(2), question_id: question.id, user_id: User.find_by(name: 'Kelvin').id)
 end
+
+Quiz.create( name: 'New Quiz', date: Date.new(2017,01,03))
+Question.create( text: 'Question 1', quiz_id: Quiz.last.id)
+

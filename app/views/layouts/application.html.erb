@@ -26,6 +26,21 @@
   </head>
 
   <body>
+    <div id='navbar'>
+        <img id='logo' src= <%= image_url("communication-icon.png") %>>
+        <h1 id='title'>H2H Quizzes</h1>
+        <p id='subtitle'>powered by</p>
+        <img id='h2h' src= <%= image_url("h2h.png") %>>
+        <div id="user-info">
+            <div id="icon-image">
+                <img id="user-image"src=<%= image_url("user-icon.png") %>>
+            </div>
+            <div id='name'>
+                <%= link_to @user.name, user_path(@user.id) %>
+            </div>
+            <img id='dropdown' src= <%= image_url("dropdown-arrow.png") %>>
+        </div>
+    </div>
     <%= yield %>
   </body>
 </html>

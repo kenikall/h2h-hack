@@ -1,5 +1,73 @@
+h2{ padding: 0px}
+h3{ padding: 0px}
+h6{ margin-bottom: 5px }
+
+
+#q-show-content{
+  position: fixed;
+  top: 90px;
+  left: 5%;
+}
+
+.users{
+  position: fixed;
+  left: 80%;
+  top: 90px;
+  width: 200px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.user-button{
+  padding: 5px;
+}
+
+.name{
+  font-size: 30px;
+  position: absolute;
+  left: 60px;
+  top: -10px;
+}
+
+#user2{ top: 170px; }
+#user3{ top: 250px; }
+#user4{ top: 330px; }
+
+#quiz-questions{
+  position: fixed;
+  top: 410px;
+  left: 70%;
+}
+
+.quiz-name{
+  position: fixed;
+  top: 50px;
+}
+
+.question{
+  position: fixed;
+  top: 70px;
+}
+
+#input-icons{
+  position: relative;
+  top: 150px;
+}
+
 #response-area{
+  position: relative;
+  background-color: white;
+  top: 160px;
   height: 300px;
   width: 600px;
-  border: solid black 3px;
+  border: 3px solid black;
+}
+
+#response-text{
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
 }

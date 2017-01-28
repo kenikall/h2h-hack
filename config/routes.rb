@@ -11,10 +11,4 @@ Rails.application.routes.draw do
     resources :responses
   end
 
-  # get 'user/show'
-
-  # get 'question/show'
-
-  # get 'quiz/index'
-  # get 'questions/show' => 'questions#show'
 end
