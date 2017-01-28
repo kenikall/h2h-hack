@@ -1,3 +1,95 @@
-// Place all the styles related to the Quiz controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  font-size: 60px;
+  font-style: bold;
+  color: white;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+
+body{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 32px;
+  background-color: ivory;
+}
+
+p {
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+
+
+#icon-image{
+  position: absolute;
+  background-color: white;
+  left: 80%;
+  top: 10%;
+  height: 50px;
+  width: 50px;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+#user-image{
+  position: absolute;
+  left: -15px;
+  top: -12px;
+}
+
+#name{
+  position: absolute;
+  left: 85%;
+  top: 20%;
+}
+
+#dropdown{
+  position: absolute;
+  left: 93%;
+  top: 30%;
+}
+
+#navbar{
+  position: fixed;
+  height:80px;
+  width: 95%;
+  left: 2.5%;
+  top: 1%;
+  background-color: #F2A225;
+  border-radius: 20px;
+}
+
+#logo{
+  position: fixed;
+  height:75px;
+  left: 40px;
+}
+
+#title{
+  position: absolute;
+  top: -15px;
+  left: 75px;
+}
+
+#subtitle{
+  color: lightGray;
+  position: absolute;
+  top: 40px;
+  left: 300px;
+}
+
+#h2h{
+  position: absolute;
+  top: 60px;
+  left: 380px;
+}
+
+#quiz-table{
+  position: fixed;
+  top: 90px;
+  left: 5%;
+  width: 500px;
+}
+

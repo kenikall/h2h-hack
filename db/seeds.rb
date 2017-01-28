@@ -8,18 +8,16 @@ User.create( name: 'Kelvin')
 User.create( name: 'Mannah')
 User.create( name: 'Nick')
 
-User.all.each do |user|
-  Quiz.create( name: 'Algorithms', date: Date.new(2017,01,15), user_id: user.id)
-  Quiz.create( name: 'Ruby', date: Date.new(2017,01,13), user_id: user.id)
-  Quiz.create( name: 'JavaScript', date: Date.new(2017,01,12), user_id: user.id)
-  Quiz.create( name: 'JQuery', date: Date.new(2017,01,10), user_id: user.id)
-  Quiz.create( name: 'Markdown', date: Date.new(2017,01,10), user_id: user.id)
-  Quiz.create( name: 'Ajax', date: Date.new(2017,01,07), user_id: user.id)
-  Quiz.create( name: 'API', date: Date.new(2017,01,07), user_id: user.id)
-  Quiz.create( name: 'React', date: Date.new(2017,01,05), user_id: user.id)
-  Quiz.create( name: 'Ember', date: Date.new(2017,01,03), user_id: user.id)
-  Quiz.create( name: 'html', date: Date.new(2017,01,03), user_id: user.id)
-end
+Quiz.create( name: 'Algorithms', date: Date.new(2017,01,15), users: User.all)
+Quiz.create( name: 'Ruby', date: Date.new(2017,01,13), users: User.all)
+Quiz.create( name: 'JavaScript', date: Date.new(2017,01,12), users: User.all)
+Quiz.create( name: 'JQuery', date: Date.new(2017,01,10), users: User.all)
+Quiz.create( name: 'Markdown', date: Date.new(2017,01,10), users: User.all)
+Quiz.create( name: 'Ajax', date: Date.new(2017,01,07), users: User.all)
+Quiz.create( name: 'API', date: Date.new(2017,01,07), users: User.all)
+Quiz.create( name: 'React', date: Date.new(2017,01,05), users: User.all)
+Quiz.create( name: 'Ember', date: Date.new(2017,01,03), users: User.all)
+Quiz.create( name: 'html', date: Date.new(2017,01,03), users: User.all)
 
 Quiz.all.each do |quiz|
   Question.create( text: 'Question 1', quiz_id: quiz.id)
@@ -40,3 +38,7 @@ Question.all.each do |question|
   Response.create( path: 'wwww.google.com', correct: Random.rand(2), question_id: question.id, user_id: User.find_by(name: 'Mannah').id)
   Response.create( path: 'wwww.google.com', correct: Random.rand(2), question_id: question.id, user_id: User.find_by(name: 'Kelvin').id)
 end
+
+Quiz.create( name: 'New Quiz', date: Date.new(2017,01,03))
+Question.create( text: 'Question 1', quiz_id: Quiz.last.id)
+

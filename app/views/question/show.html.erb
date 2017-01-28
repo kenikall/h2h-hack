@@ -1,2 +1,48 @@
-<h1>Question#show</h1>
-<p>Find me in app/views/question/show.html.erb</p>
+<div id="q-show-content">
+  <h3 class='quiz-name'><%= @quiz.name %></h3>
+  <h2 class='question'><%= @question.text %></h2>
+  <div id="participants">
+    <div id="user1" class="users">
+      <img id='user1-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <p class="name">Alex</p>
+    </div>
+    <div id="user2" class="users">
+      <img id='user2-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <p class="name">Kelvin</p>
+    </div>
+    <div id="user3" class="users">
+      <img id='user3-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <p class="name">Nick</p>
+    </div>
+    <div id="user4" class="users">
+      <img id='user4-button' class="user-button" src=<%= image_url('rbutton.png') %>>
+      <p class="name">Ready?</p>
+    </div>
+  </div>
+
+  <div id="input-icons">
+    <img id='code-icon' src= <%= image_url("code-icon.png") %>>
+    <img id='text-icon' src= <%= image_url("text-icon.png") %>>
+    <img id='whiteboard-icon' src= <%= image_url("whiteboard-icon.png") %>>
+    <img id='file-icon' src= <%= image_url("file-icon.png") %>>
+  </div>
+  <div id='response-area'>
+    <textarea id='response-text' placeholder="Enter text here."></textarea>
+  </div>
+
+  <div id="quiz-questions">
+    <h6><%= @quiz.name %> Questions</h6>
+    <ol>
+      <% @quiz.questions.all.each do |question| %>
+        <li>
+          <%= question.text %>
+          <% question.responses.each do |response| %>
+            <% if response.correct %>
+              <a href="<%= response.path %>"></a>
+            <% end %>
+          <% end %>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+</div>

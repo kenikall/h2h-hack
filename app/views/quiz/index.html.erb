@@ -1,2 +1,21 @@
-<h1>Quiz#index</h1>
-<p>Find me in app/views/quiz/index.html.erb</p>
+<table id='quiz-table'>
+  <% @quizzes.each do |quiz| %>
+    <tr class="quiz-list">
+      <td>
+        <%= link_to quiz.name, quiz_question_path(quiz, quiz.questions.first) %>
+      </td>
+      <td>
+        <% if !quiz.questions.first.responses.find_by( user_id:@user.id) %>
+          <%= link_to 'Take Quiz', quiz_question_path(quiz, quiz.questions.first)  %>
+        <% else %>
+          <% correct = 0 %>
+          <% quiz.questions.each do |question| %>
+            <% correct += 1 if question.responses.find_by( user_id:@user.id).correct %>
+          <% end %>
+          <%= (correct.to_f/quiz.questions.length*100).round.to_s + '%'%>
+        <% end %>
+      </td>
+    </tr>
+  <% end  %>
+  <tr><td><%= button_tag "Create New Quiz"%></td> </tr>
+</table>
