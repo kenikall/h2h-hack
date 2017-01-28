@@ -1,0 +1,16 @@
+<div id="quiz-questions">
+  <h3 class='quiz-name'><%= @quiz.name %></h3>
+  <h6><%= @quiz.name %> Questions</h6>
+  <ol>
+    <% @quiz.questions.all.each do |question| %>
+      <li>
+        <%= link_to question.text, quiz_question_path(@quiz, question) %>
+        <% if question.responses.find_by(user_id: @user.id).correct %>
+          <img src=<%= image_url('correct-icon.png') %> >
+        <% else %>
+          <img src=<%= image_url('wrong-icon.png') %> >
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+</div>
