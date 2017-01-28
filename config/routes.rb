@@ -11,11 +11,11 @@ Rails.application.routes.draw do
     resources :responses
   end
 
-  get 'user/show'
+  # get 'user/show'
 
-  get 'question/show'
+  # get 'question/show'
 
-  get 'quiz/index'
+  # get 'quiz/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

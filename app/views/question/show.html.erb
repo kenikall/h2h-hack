@@ -1,2 +1,33 @@
-<h1>Question#show</h1>
-<p>Find me in app/views/question/show.html.erb</p>
+<h3>@quiz.name</h3>
+<h1><%= @question.text %></h1>
+<div id="ready-buttons">
+  <img id='user1-button' src="./public/images/rbutton.jpg">
+  <img id='user2-button' src="./public/images/rbutton.jpg">
+  <img id='user3-button' src="./public/images/rbutton.jpg">
+  <img id='user4-button' src="./public/images/rbutton.jpg">
+</div>
+
+<div id="input-icons">
+  <img id='code-icon' src="./public/images/code-icon.png">
+  <img id='text-icon' src="./public/images/text-icon.png">
+  <img id='whiteboard-icon' src="./public/images/whiteboard-icon.png">
+  <img id='file-icon' src="./public/images/file-icon.png">
+</div>
+
+<div id='response-area'>
+
+</div>
+
+<h3><%= @quiz.name %> Questions</h3>
+<ol>
+  <% quiz.questions.all.each do |question| %>
+    <li>
+      <%= question.text %>
+      <% question.response.each do |response| %>
+        <% if response.correct %>
+          <a href="<%= response.path %>"></a>
+        <% end %>
+      <% end %>
+    </li>
+  <% end %>
+</ol>

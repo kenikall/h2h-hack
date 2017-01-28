@@ -6,7 +6,7 @@
 <ul>
   <% @quizzes.each do |quiz| %>
     <li class="quiz-list">
-      <a href="/quizzes/<%= quiz.id %>"><%= quiz.name %></a>
+      <%= link_to quiz.name, question_question_path(@quiz, @quiz.questions.first) %>
     </li>
   <% end  %>
 </ul>
