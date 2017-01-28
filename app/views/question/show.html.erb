@@ -1,29 +1,28 @@
-<h3>@quiz.name</h3>
+<h3><%= @quiz.name %></h3>
 <h1><%= @question.text %></h1>
 <div id="ready-buttons">
-  <img id='user1-button' src="./public/images/rbutton.jpg">
-  <img id='user2-button' src="./public/images/rbutton.jpg">
-  <img id='user3-button' src="./public/images/rbutton.jpg">
-  <img id='user4-button' src="./public/images/rbutton.jpg">
+  <img id='user1-button' src=<%= image_url('rbutton.jpg') %>>
+  <img id='user2-button' src=<%= image_url('rbutton.jpg') %>>
+  <img id='user3-button' src=<%= image_url('rbutton.jpg') %>>
+  <img id='user4-button' src=<%= image_url('rbutton.jpg') %>>
 </div>
 
 <div id="input-icons">
-  <img id='code-icon' src="./public/images/code-icon.png">
-  <img id='text-icon' src="./public/images/text-icon.png">
-  <img id='whiteboard-icon' src="./public/images/whiteboard-icon.png">
-  <img id='file-icon' src="./public/images/file-icon.png">
+  <img id='code-icon' src= <%= image_url("code-icon.png") %>>
+  <img id='text-icon' src= <%= image_url("text-icon.png") %>>
+  <img id='whiteboard-icon' src= <%= image_url("whiteboard-icon.jpg") %>>
+  <img id='file-icon' src= <%= image_url("file-icon.png") %>>
 </div>
-
 <div id='response-area'>
 
 </div>
 
 <h3><%= @quiz.name %> Questions</h3>
 <ol>
-  <% quiz.questions.all.each do |question| %>
+  <% @quiz.questions.all.each do |question| %>
     <li>
       <%= question.text %>
-      <% question.response.each do |response| %>
+      <% question.responses.each do |response| %>
         <% if response.correct %>
           <a href="<%= response.path %>"></a>
         <% end %>

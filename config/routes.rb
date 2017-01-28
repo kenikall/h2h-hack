@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :quizzes do
-    resources :questions
+    resources :question
   end
 
   resources :questions do
@@ -16,6 +16,5 @@ Rails.application.routes.draw do
   # get 'question/show'
 
   # get 'quiz/index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # get 'questions/show' => 'questions#show'
 end
