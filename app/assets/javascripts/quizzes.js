@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 var meetingFrame = function(){
-  $('#user4').click(function () {
+  $('#user4-rbutton').click(function () {
     event.preventDefault();
     console.log('clicked the video listener');
 
@@ -29,9 +29,9 @@ var meetingLinkGrabber = function() {
         "height": 12
       }
     ],
-    "applicationId": "9155BF89-2C10-4E43-88F3-73748AC158D0",
+    "applicationId": "FD9BCBE6-B191-45A4-92BC-736525D700D0",
     "name": "mannah",
-    "templateId": "DA22B2BF-19FE-4463-8FBC-508683D4A76D"
+    "templateId": "69A4600E-DECC-43E0-89B5-97CEFCBA1723"
   })
 });
 
