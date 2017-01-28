@@ -1,4 +1,79 @@
 #dataviz{
+  font-size: 12px;
   position: absolute;
-  // top:
+  top: 120px;
+  height: 100%;
+  width: 100%;
+}
+
+#time-map{
+  position: absolute;
+  left: 4%;
+  width: 45%;
+  height: 60%;
+  border: 2px solid black;
+}
+
+#line-graph{
+  position: absolute;
+  left: 50%;
+  width: 45%;
+  height: 60%;
+  border: 2px solid black;
+}
+
+#doughnut{
+  position: absolute;
+  top: 65%;
+  left: 4%;
+  width: 45%;
+  height: 60%;
+  border: 2px solid black;
+}
+
+#histogram{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: 45%;
+  height: 60%;
+  border: 2px solid black;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+path.slice{
+  stroke-width:2px;
+}
+
+polyline{
+  opacity: .3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.labelValue
+{
+  font-size: 60%;
+  opacity: .5;
+
+}
+
+.toolTip {
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
 }

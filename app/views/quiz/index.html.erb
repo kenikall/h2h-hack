@@ -3,7 +3,11 @@
     <% @quizzes.each do |quiz| %>
       <tr class="quiz-list">
         <td>
-          <%= link_to quiz.name, quiz_question_path(quiz, quiz.questions.first) %>
+          <% if !quiz.questions.first.responses.find_by( user_id:@user.id) %>
+            <%= link_to quiz.name, quiz_question_path(quiz, quiz.questions.first) %>
+          <% else %>
+            <%= link_to quiz.name, quiz_path(quiz) %>
+          <% end %>
         </td>
         <td>
           <% if !quiz.questions.first.responses.find_by( user_id:@user.id) %>
