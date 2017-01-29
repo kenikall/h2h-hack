@@ -26,7 +26,7 @@ var joinYoMeeting = function(){
     data: JSON.stringify(
     {
       "email":"hello@yomama.com",
-      "meetingId": "011351636",
+      "meetingId": "228942223",
       "name":"Matt"
     }),
     success: function(resp, status, xhr){
