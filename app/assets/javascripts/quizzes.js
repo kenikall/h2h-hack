@@ -14,6 +14,7 @@ var meetingFrame = function(){
     document.getElementById('master-of-API').innerHTML='<object class="video" style="margin: 80px 0px 0px 0px; height: 85vh; width: 100%;" type="text/html" data=' + meetingURL + '></object>';
   });
 };
+// For the best meetings, hit up slack
 // To Join a Meeting that is fleeting
 var joinYoMeeting = function(){
   $.ajax(
