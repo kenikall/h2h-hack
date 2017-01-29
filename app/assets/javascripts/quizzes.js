@@ -11,7 +11,7 @@ var meetingFrame = function(){
     event.preventDefault();
     console.log('clicked the video listener');
 
-    document.getElementById('master-of-API').innerHTML='<object class="video" style="margin: 80px 0px 0px 40px; height:700px; width:1430px;" type="text/html" data=' + meetingURL + '></object>';
+    document.getElementById('master-of-API').innerHTML='<object class="video" style="margin: 80px 0px 0px 0px; height: 85vh; width: 100%;" type="text/html" data=' + meetingURL + '></object>';
   });
 };
 // To Join a Meeting that is fleeting
