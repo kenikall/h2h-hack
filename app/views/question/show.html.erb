@@ -1,51 +1,53 @@
-<div id="q-left-show-content">
-  <h3 class='quiz-name'><%= @quiz.name %></h3>
-  <h2 class='question'><%= @question.text %></h2>
+<div id="master-of-API">
+  <div id="q-left-show-content">
+    <h3 class='quiz-name'><%= @quiz.name %></h3>
+    <h2 class='question'><%= @question.text %></h2>
 
 
-  <div id="input-icons">
-    <ul>
-      <li>
-        <img id='code-icon' src= <%= image_url("code-icon.png") %>>
-      </li>
-      <li>
-        <img id='text-icon' src= <%= image_url("text-icon.png") %>>
-      </li>
-      <li>
-        <img id='whiteboard-icon' src= <%= image_url("whiteboard-icon.png") %>>
-      </li>
-      <li>
-        <img id='file-icon' src= <%= image_url("file-icon.png") %>>
-      </li>
-    </ul>
+    <div id="input-icons">
+      <ul>
+        <li>
+          <img id='code-icon' src= <%= image_url("code-icon.png") %>>
+        </li>
+        <li>
+          <img id='text-icon' src= <%= image_url("text-icon.png") %>>
+        </li>
+        <li>
+          <img id='whiteboard-icon' src= <%= image_url("whiteboard-icon.png") %>>
+        </li>
+        <li>
+          <img id='file-icon' src= <%= image_url("file-icon.png") %>>
+        </li>
+      </ul>
+    </div>
+    <div id='response-area'>
+      <textarea id='response-text' placeholder="Enter text here."></textarea>
+    </div>
   </div>
-  <div id='response-area'>
-    <textarea id='response-text' placeholder="Enter text here."></textarea>
+
+
+  <div id="q-right-show-content">
+      <div id="participants">
+      <div id="user1" class="users">
+        <img id='user1-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+        <img id='user1-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
+        <p class="name">Alex</p>
+      </div>
+      <div id="user2" class="users">
+        <img id='user2-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+        <img id='user2-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
+        <p class="name">Kelvin</p>
+      </div>
+      <div id="user3" class="users">
+        <img id='user3-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+        <img id='user3-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
+        <p class="name">Nick</p>
+      </div>
+      <div id="user4" class="users">
+        <img id='user4-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
+        <img id='user4-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
+        <p class="name">Ready?</p>
+      </div>
+    </div>
   </div>
 </div>
-
-<div id="q-right-show-content">
-    <div id="participants">
-    <div id="user1" class="users">
-      <img id='user1-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
-      <img id='user1-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
-      <p class="name">Alex</p>
-    </div>
-    <div id="user2" class="users">
-      <img id='user2-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
-      <img id='user2-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
-      <p class="name">Kelvin</p>
-    </div>
-    <div id="user3" class="users">
-      <img id='user3-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
-      <img id='user3-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
-      <p class="name">Nick</p>
-    </div>
-    <div id="user4" class="users">
-      <img id='user4-rbutton' class="user-button" src=<%= image_url('rbutton.png') %>>
-      <img id='user4-gbutton' class="user-button" src=<%= image_url('gbutton.png') %>>
-      <p class="name">Ready?</p>
-    </div>
-  </div>
-</div>
-

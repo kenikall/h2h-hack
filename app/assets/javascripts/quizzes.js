@@ -1,10 +1,9 @@
 $(document).ready(function() {
-  // meetingLinkGrabber();
-  // videoLinkGrabber();
   var meetingURL = "";
   var meetingId = "";
-  meetingLinkGrabber();
-  console.log(meetingURL);
+  // meetingLinkGrabber();
+  joinYoMeeting();
+
 });
 
 var meetingFrame = function(){
@@ -12,10 +11,33 @@ var meetingFrame = function(){
     event.preventDefault();
     console.log('clicked the video listener');
 
-    document.getElementById('q-show-content').innerHTML='<object class="video" style="height:800px; width:1000px;" type="text/html" data=' + meetingURL + '></object>';
+    document.getElementById('master-of-API').innerHTML='<object class="video" style="margin: 80px 0px 0px 0px; height: 85vh; width: 100%;" type="text/html" data=' + meetingURL + '></object>';
   });
 };
-
+// For the best meetings, hit up slack
+// To Join a Meeting that is fleeting
+var joinYoMeeting = function(){
+  $.ajax(
+  {
+    url: "https://sandbox.liveh2h.com/tutormeetweb/rest/v1/meetings/join",
+    type: "POST",
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    data: JSON.stringify(
+    {
+      "email":"hello@yomama.com",
+      "meetingId": "011351636",
+      "name":"Matt"
+    }),
+    success: function(resp, status, xhr){
+      meetingURL = resp.data.meetingURL
+      meetingFrame();
+    },
+    error: function () {
+      //Error message or call back function
+    }
+  })
+}
 // Grabs meeting URL and meeting ID
 var meetingLinkGrabber = function() {
   var request = $.ajax({
@@ -46,17 +68,5 @@ request.done(function(response) {
 
 request.fail(function(response) {
   alert("An error occured.");
-});
-};
-
-var videoLinkGrabber = function(meetingId) {
-  $.ajax({
-  url: "https://meetstage-us.liveh2h.com/h2h-record/record/listings?meetingId=272869444&origin=TME",
-  type: 'GET',
-  success: function(response) {
-      console.log('response', response);
-  },  
-  error: function (e) {
-  }
 });
 };
