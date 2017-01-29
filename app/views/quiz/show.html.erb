@@ -5,6 +5,7 @@
     <% @quiz.questions.all.each do |question| %>
       <li>
         <%= link_to question.text, quiz_question_path(@quiz, question) %>
+          <a href="/videos/1">Video</a>
         <% if question.responses.find_by(user_id: @user.id).correct %>
           <img src=<%= image_url('correct-icon.png') %> >
         <% else %>
